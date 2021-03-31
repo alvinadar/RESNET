@@ -1,5 +1,5 @@
 [resnet.txt](https://github.com/alvinadar/RESNET/files/6055012/resnet.txt)
-# -*- from d2l import torch as d2l
+from d2l import torch as d2l
 import torch
 from torch import nn
 from torch.nn import functional as F
@@ -20,7 +20,7 @@ class Residual(nn.Module):  #@save
             self.conv3 = None
         self.bn1 = nn.BatchNorm2d(num_channels)
         self.bn2 = nn.BatchNorm2d(num_channels)
-        self.relu = nn.ReLU(inplace=True)
+        self.relu = nn.ReLU(inplace=True)-*-
 
     def forward(self, X):
         Y = F.relu(self.bn1(self.conv1(X)))
